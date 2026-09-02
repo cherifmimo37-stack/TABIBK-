@@ -3,55 +3,62 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="theme-color"
-          content="#0B8F95">
+    <title>TABIBK | طبيبي - حجز موعد عند الطبيب</title>
 
     <meta name="description"
-          content="TABIBK - احجز موعدك مع طبيبك بسهولة">
-
-    <title>TABIBK | طبيبي</title>
+        content="TABIBK - منصة حجز المواعيد الطبية بسهولة وأمان">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
 
     <!-- ================= HEADER ================= -->
 
-    <header class="site-header">
+    <header class="header">
 
-        <div class="header-inner">
+        <div class="container nav">
 
-            <a href="/" class="brand">
+            <!-- LOGO -->
 
-                <div class="brand-mark">
-                    <span>+</span>
+            <a href="/" class="logo">
+
+                <div class="logo-symbol">
+                    <i class="fa-solid fa-plus"></i>
                 </div>
 
-                <div class="brand-text">
+                <div class="logo-text">
+
                     <strong>TABIBK</strong>
-                    <small>طبيبي</small>
+
+                    <span>طبيبي</span>
+
                 </div>
 
             </a>
 
 
-            <nav class="main-nav">
+            <!-- NAVIGATION -->
 
-                <a href="/" class="active">
+            <nav class="menu">
+
+                <a href="#home" class="active">
                     الرئيسية
-                </a>
-
-                <a href="#doctors">
-                    الأطباء
                 </a>
 
                 <a href="#specialties">
                     التخصصات
+                </a>
+
+                <a href="#doctors">
+                    الأطباء
                 </a>
 
                 <a href="#how">
@@ -61,45 +68,39 @@
             </nav>
 
 
-            <div class="header-actions">
+            <!-- ACTIONS -->
 
-                <button
-                    class="btn btn-outline"
-                    onclick="location.href='login.html'">
+            <div class="nav-actions">
+
+                <a href="login.html" class="login-btn">
+                    <i class="fa-regular fa-user"></i>
                     تسجيل الدخول
-                </button>
+                </a>
 
-                <button
-                    class="btn btn-primary"
-                    onclick="location.href='patient.html'">
+                <a href="#booking" class="header-book-btn">
                     احجز موعد
-                </button>
+                </a>
 
             </div>
-
-
-            <button
-                class="mobile-menu"
-                aria-label="فتح القائمة">
-
-                ☰
-
-            </button>
 
         </div>
 
     </header>
 
 
+
     <!-- ================= HERO ================= -->
 
     <main>
 
-        <section class="hero">
+        <section id="home" class="hero">
 
-            <div class="hero-inner">
+            <div class="container hero-content">
 
-                <div class="hero-content">
+
+                <!-- HERO TEXT -->
+
+                <div class="hero-text">
 
                     <div class="hero-badge">
 
@@ -114,94 +115,86 @@
 
                         احجز موعدك مع
                         <span>طبيبك</span>
-                        بسهولة
+                        بكل سهولة
 
                     </h1>
 
 
                     <p>
 
-                        ابحث عن الطبيب المناسب لك،
-                        اختر الموعد الذي يناسبك،
-                        واحجز في دقائق بدون انتظار.
+                        ابحث عن الطبيب المناسب، اختر الموعد الذي يناسبك
+                        واحجز استشارتك الطبية في دقائق.
 
                     </p>
 
 
                     <!-- SEARCH -->
 
-                    <div class="doctor-search">
+                    <form class="search-box" id="searchForm">
 
-                        <div class="search-item">
+                        <div class="search-field">
 
-                            <span class="search-icon">
-                                ⌕
-                            </span>
+                            <i class="fa-solid fa-stethoscope"></i>
 
-                            <div>
-
-                                <small>
-                                    ماذا تبحث؟
-                                </small>
-
-                                <input
-                                    type="text"
-                                    placeholder="طبيب أو تخصص طبي">
-
-                            </div>
+                            <input
+                                type="text"
+                                id="doctorSearch"
+                                placeholder="طبيب أو تخصص طبي">
 
                         </div>
 
 
-                        <div class="search-divider"></div>
+                        <div class="search-field">
 
+                            <i class="fa-solid fa-location-dot"></i>
 
-                        <div class="search-item">
-
-                            <span class="search-icon">
-                                ◉
-                            </span>
-
-                            <div>
-
-                                <small>
-                                    أين؟
-                                </small>
-
-                                <input
-                                    type="text"
-                                    placeholder="الولاية أو البلدية">
-
-                            </div>
+                            <input
+                                type="text"
+                                id="locationSearch"
+                                placeholder="الولاية أو البلدية">
 
                         </div>
 
 
-                        <button
-                            class="search-button">
+                        <button type="submit" class="search-btn">
 
-                            بحث عن طبيب
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            بحث
 
                         </button>
 
-                    </div>
+                    </form>
 
 
-                    <div class="hero-stats">
+                    <!-- STATS -->
 
-                        <div>
+                    <div class="stats">
+
+                        <div class="stat">
+
                             <strong>+500</strong>
+
                             <span>طبيب</span>
+
                         </div>
 
-                        <div>
+
+                        <div class="stat">
+
                             <strong>+20</strong>
-                            <span>تخصص</span>
+
+                            <span>تخصص طبي</span>
+
                         </div>
 
-                        <div>
+
+                        <div class="stat">
+
                             <strong>+10K</strong>
-                            <span>موعد</span>
+
+                            <span>موعد محجوز</span>
+
                         </div>
 
                     </div>
@@ -209,52 +202,71 @@
                 </div>
 
 
+
                 <!-- HERO VISUAL -->
 
                 <div class="hero-visual">
 
-                    <div class="visual-background"></div>
 
-                    <div class="doctor-card">
+                    <div class="medical-circle">
 
-                        <div class="doctor-avatar">
-                            DR
+                        <div class="medical-cross">
+                            +
                         </div>
 
-                        <div class="doctor-info">
+                    </div>
+
+
+                    <!-- DOCTOR CARD -->
+
+                    <div class="doctor-preview">
+
+                        <div class="doctor-avatar">
+
+                            <i class="fa-solid fa-user-doctor"></i>
+
+                        </div>
+
+
+                        <div class="doctor-details">
 
                             <strong>
                                 طبيب متخصص
                             </strong>
 
                             <span>
-                                طب عام وطب الأسرة
+                                طب عام
                             </span>
 
                             <div class="rating">
 
-                                <b>★</b>
-                                <span>4.9</span>
+                                <i class="fa-solid fa-star"></i>
 
-                                <small>
-                                    تقييم المرضى
-                                </small>
+                                4.9
 
                             </div>
 
                         </div>
 
-                        <span class="verified">
-                            ✓
-                        </span>
+
+                        <div class="verified">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                        </div>
 
                     </div>
 
 
+
+                    <!-- APPOINTMENT CARD -->
+
                     <div class="appointment-card">
 
                         <div class="appointment-icon">
-                            ✓
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
                         </div>
 
                         <div>
@@ -264,7 +276,7 @@
                             </strong>
 
                             <span>
-                                اليوم · 10:30 صباحًا
+                                اليوم • 10:30 صباحًا
                             </span>
 
                         </div>
@@ -272,11 +284,18 @@
                     </div>
 
 
-                    <div class="visual-circle">
+                    <!-- FLOATING ICONS -->
 
-                        <div class="medical-cross">
-                            +
-                        </div>
+                    <div class="floating-icon icon-one">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                    </div>
+
+
+                    <div class="floating-icon icon-two">
+
+                        <i class="fa-solid fa-shield-heart"></i>
 
                     </div>
 
@@ -285,449 +304,102 @@
             </div>
 
         </section>
+
 
 
         <!-- ================= SPECIALTIES ================= -->
 
-        <section
-            class="section"
-            id="specialties">
+        <section id="specialties" class="section">
 
-            <div class="section-heading">
+            <div class="container">
 
-                <div>
+                <div class="section-title">
 
-                    <span>
-                        اكتشف
-                    </span>
+                    <div>
 
-                    <h2>
-                        التخصصات الطبية
-                    </h2>
-
-                </div>
-
-                <a href="#">
-                    عرض جميع التخصصات ←
-                </a>
-
-            </div>
-
-
-            <div class="specialty-grid">
-
-                <button class="specialty-card">
-
-                    <div class="specialty-icon">
-                        ♥
-                    </div>
-
-                    <strong>
-                        أمراض القلب
-                    </strong>
-
-                    <span>
-                        أطباء متخصصون
-                    </span>
-
-                </button>
-
-
-                <button class="specialty-card">
-
-                    <div class="specialty-icon">
-                        +
-                    </div>
-
-                    <strong>
-                        طب الأسنان
-                    </strong>
-
-                    <span>
-                        أطباء متخصصون
-                    </span>
-
-                </button>
-
-
-                <button class="specialty-card">
-
-                    <div class="specialty-icon">
-                        ◉
-                    </div>
-
-                    <strong>
-                        طب العيون
-                    </strong>
-
-                    <span>
-                        أطباء متخصصون
-                    </span>
-
-                </button>
-
-
-                <button class="specialty-card">
-
-                    <div class="specialty-icon">
-                        ✦
-                    </div>
-
-                    <strong>
-                        طب الأطفال
-                    </strong>
-
-                    <span>
-                        أطباء متخصصون
-                    </span>
-
-                </button>
-
-
-                <button class="specialty-card">
-
-                    <div class="specialty-icon">
-                        ◆
-                    </div>
-
-                    <strong>
-                        الأمراض الجلدية
-                    </strong>
-
-                    <span>
-                        أطباء متخصصون
-                    </span>
-
-                </button>
-
-
-                <button class="specialty-card">
-
-                    <div class="specialty-icon">
-                        +
-                    </div>
-
-                    <strong>
-                        الطب العام
-                    </strong>
-
-                    <span>
-                        أطباء متخصصون
-                    </span>
-
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= HOW IT WORKS ================= -->
-
-        <section
-            class="how-section"
-            id="how">
-
-            <div class="section-heading center">
-
-                <div>
-
-                    <span>
-                        بسيط وسريع
-                    </span>
-
-                    <h2>
-                        كيف يعمل TABIBK؟
-                    </h2>
-
-                </div>
-
-            </div>
-
-
-            <div class="steps">
-
-                <div class="step">
-
-                    <div class="step-number">
-                        01
-                    </div>
-
-                    <h3>
-                        ابحث عن طبيب
-                    </h3>
-
-                    <p>
-                        اختر التخصص والمكان
-                        وابحث عن الطبيب المناسب.
-                    </p>
-
-                </div>
-
-
-                <div class="step">
-
-                    <div class="step-number">
-                        02
-                    </div>
-
-                    <h3>
-                        اختر الموعد
-                    </h3>
-
-                    <p>
-                        شاهد الأوقات المتاحة
-                        واختر الموعد المناسب لك.
-                    </p>
-
-                </div>
-
-
-                <div class="step">
-
-                    <div class="step-number">
-                        03
-                    </div>
-
-                    <h3>
-                        أكد الحجز
-                    </h3>
-
-                    <p>
-                        أكد موعدك وتوجه إلى
-                        الطبيب في الوقت المحدد.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= DOCTORS ================= -->
-
-        <section
-            class="section"
-            id="doctors">
-
-            <div class="section-heading">
-
-                <div>
-
-                    <span>
-                        موثوقون
-                    </span>
-
-                    <h2>
-                        أطباء مميزون
-                    </h2>
-
-                </div>
-
-                <a href="#">
-                    مشاهدة الأطباء ←
-                </a>
-
-            </div>
-
-
-            <div class="doctors-grid">
-
-                <article class="doctor-profile">
-
-                    <div class="profile-top">
-
-                        <div class="profile-avatar">
-                            DR
-                        </div>
-
-                        <span class="online">
-                            متاح
+                        <span>
+                            التخصصات الطبية
                         </span>
 
-                    </div>
-
-                    <h3>
-                        طبيب متخصص
-                    </h3>
-
-                    <p>
-                        طبيب عام وطب الأسرة
-                    </p>
-
-                    <div class="profile-rating">
-                        ★ 4.9
-                    </div>
-
-                    <button class="profile-button">
-                        عرض الملف
-                    </button>
-
-                </article>
-
-
-                <article class="doctor-profile">
-
-                    <div class="profile-top">
-
-                        <div class="profile-avatar">
-                            DR
-                        </div>
-
-                        <span class="online">
-                            متاح
-                        </span>
+                        <h2>
+                            اختر التخصص المناسب لك
+                        </h2>
 
                     </div>
 
-                    <h3>
-                        طبيب متخصص
-                    </h3>
-
-                    <p>
-                        طب الأطفال
-                    </p>
-
-                    <div class="profile-rating">
-                        ★ 4.8
-                    </div>
-
-                    <button class="profile-button">
-                        عرض الملف
-                    </button>
-
-                </article>
-
-
-                <article class="doctor-profile">
-
-                    <div class="profile-top">
-
-                        <div class="profile-avatar">
-                            DR
-                        </div>
-
-                        <span class="online">
-                            متاح
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        طبيب متخصص
-                    </h3>
-
-                    <p>
-                        طب الأسنان
-                    </p>
-
-                    <div class="profile-rating">
-                        ★ 4.9
-                    </div>
-
-                    <button class="profile-button">
-                        عرض الملف
-                    </button>
-
-                </article>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="footer">
-
-        <div class="footer-inner">
-
-            <div>
-
-                <div class="brand footer-brand">
-
-                    <div class="brand-mark">
-                        <span>+</span>
-                    </div>
-
-                    <div class="brand-text">
-
-                        <strong>TABIBK</strong>
-
-                        <small>
-                            طبيبي
-                        </small>
-
-                    </div>
+                    <a href="#" class="see-all">
+                        عرض الكل
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
 
                 </div>
 
-                <p>
-                    منصتك لحجز المواعيد الطبية
-                    بسهولة وأمان.
-                </p>
 
-            </div>
+                <div class="specialties-grid">
 
 
-            <div class="footer-column">
+                    <button class="specialty-card">
 
-                <strong>
-                    TABIBK
-                </strong>
+                        <div class="specialty-icon heart">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
 
-                <a href="#">
-                    عن المنصة
-                </a>
+                        <strong>
+                            أمراض القلب
+                        </strong>
 
-                <a href="#">
-                    الأطباء
-                </a>
+                        <span>
+                            أطباء متخصصون
+                        </span>
 
-                <a href="#">
-                    التخصصات
-                </a>
-
-            </div>
+                    </button>
 
 
-            <div class="footer-column">
 
-                <strong>
-                    مساعدة
-                </strong>
+                    <button class="specialty-card">
 
-                <a href="#">
-                    الأسئلة الشائعة
-                </a>
+                        <div class="specialty-icon dental">
+                            <i class="fa-solid fa-tooth"></i>
+                        </div>
 
-                <a href="#">
-                    تواصل معنا
-                </a>
+                        <strong>
+                            طب الأسنان
+                        </strong>
 
-                <a href="#">
-                    سياسة الخصوصية
-                </a>
+                        <span>
+                            أطباء متخصصون
+                        </span>
 
-            </div>
-
-        </div>
+                    </button>
 
 
-        <div class="copyright">
 
-            © 2026 TABIBK — جميع الحقوق محفوظة
+                    <button class="specialty-card">
 
-        </div>
+                        <div class="specialty-icon eye">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
 
-    </footer>
+                        <strong>
+                            طب العيون
+                        </strong>
+
+                        <span>
+                            أطباء متخصصون
+                        </span>
+
+                    </button>
 
 
-    <script src="app.js"></script>
 
-</body>
+                    <button class="specialty-card">
 
-</html>
+                        <div class="specialty-icon child">
+                            <i class="fa-solid fa-child"></i>
+                        </div>
+
+                        <strong>
+                            طب الأطفال
+                        </strong>
+
+                        <
