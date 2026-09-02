@@ -1,82 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary:#087f8c;
+    --primary-dark:#05636e;
+    --secondary:#16b8a6;
+    --blue:#1476d4;
+    --dark:#102a43;
+    --text:#243b53;
+    --muted:#718096;
+    --bg:#f5f9fb;
+    --white:#ffffff;
+    --border:#e5edf2;
+    --success:#19a974;
+    --danger:#e55353;
+    --shadow:0 12px 35px rgba(16,42,67,.08);
+}
+
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial,sans-serif;
+    font-family:'Cairo',Arial,sans-serif;
     direction:rtl;
-    background:#f4f8fb;
-    color:#172b4d;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
 }
 
-header{
-    background:#ffffff;
-    padding:18px;
-    box-shadow:0 3px 15px rgba(0,0,0,.08);
-}
-
-.container{
-    width:92%;
-    max-width:1100px;
-    margin:auto;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
 button,
-.btn-primary{
-    background:#087f8c;
-    color:white;
-    border:0;
-    border-radius:12px;
-    padding:13px 22px;
+input{
+    font-family:inherit;
+}
+
+button{
     cursor:pointer;
-    font-weight:bold;
+    border:0;
 }
 
-button:hover,
-.btn-primary:hover{
-    background:#066b76;
+/* ================= CONTAINER ================= */
+
+.container{
+    width:min(1160px,92%);
+    margin:auto;
 }
 
-.hero{
-    margin:25px auto;
-    padding:45px 25px;
-    border-radius:25px;
-    background:linear-gradient(135deg,#087f8c,#12a8a8);
-    color:white;
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--border);
 }
 
-.hero h1{
-    font-size:40px;
-    margin-bottom:15px;
-}
-
-.search-box{
-    background:white;
-    padding:15px;
-    border-radius:18px;
-    margin-top:25px;
+.nav{
+    min-height:76px;
     display:flex;
-    gap:10px;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
 }
 
-.search-box input{
-    flex:1;
-    padding:14px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    font-size:15px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    font-size:21px;
+    font-weight:900;
+    color:var(--dark);
 }
 
-@media(max-width:700px){
-
-    .hero h1{
-        font-size:30px;
-    }
-
-    .search-box{
-        flex-direction:column;
-    }
-
-}
+.logoIcon{
+    width:46px;
+    height:46px;
+    display:grid;
+    place-items:center;
+    border-radius:15px;
+    color:#fff;
+    font-size:22px;
+    background:linear-gradient(135deg,var(--primary
